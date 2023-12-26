@@ -1,3 +1,5 @@
+//converts stone to pounds
+
 #include <iostream>
 
 int stonetolb(int);
