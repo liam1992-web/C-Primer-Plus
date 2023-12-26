@@ -1,3 +1,5 @@
+//using the sqrt() function
+
 #include <iostream>
 #include <cmath>
 
