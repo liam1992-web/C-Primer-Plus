@@ -1,14 +1,17 @@
+//some integer limits
+
 #include <iostream>
-#include <climits>
+#include <climits>    // use limits.h for older systems
 
 int main()
 {
     using namespace std;
-    int n_int = INT_MAX;
-    short n_short = SHRT_MAX;
+    int n_int = INT_MAX;    // initialize n_int to max int value
+    short n_short = SHRT_MAX;    //symbols defined in climits file
     long n_long = LONG_MAX;
     long long n_llong = LLONG_MAX;
 
+    // sizeof operater yields size of type or of variable
     cout << "int is " << sizeof (int) << " bytes." << endl;
     cout << "short is " << sizeof n_short << " bytes." << endl;
     cout << "long is " << sizeof n_long << " bytes." << endl;
