@@ -1,6 +1,8 @@
+//displays a message
 #include <iostream>
 //使用cin和cout进行输入和输出程序必须包含文件iostream
-int main(){
+int main()
+{
 	using namespace std;
 	cout << "Come up and C++ me some time.";
 	cout << endl;
