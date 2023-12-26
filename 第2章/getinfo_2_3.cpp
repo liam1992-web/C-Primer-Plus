@@ -1,3 +1,4 @@
+#input and output
 #include <iostream>
 
 int main()
