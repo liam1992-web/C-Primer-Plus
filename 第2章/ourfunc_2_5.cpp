@@ -1,3 +1,5 @@
+//defining your own function
+
 #include <iostream>
 
 void simon(int);
