@@ -1,3 +1,5 @@
+// some C++ arithmetic
+
 #include <iostream>
 int main()
 {
