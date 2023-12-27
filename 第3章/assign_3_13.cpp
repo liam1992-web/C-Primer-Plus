@@ -1,3 +1,5 @@
+// type changes on initialization
+
 #include <iostream>
 int main()
 {
