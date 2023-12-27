@@ -1,3 +1,5 @@
+// precision problems with float
+
 #include <iostream>
 int main()
 {
