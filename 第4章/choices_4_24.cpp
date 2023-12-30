@@ -1,3 +1,5 @@
+// array variations
+
 #include <iostream>
 #include <vector>
 #include <array>
