@@ -1,5 +1,8 @@
+// using pointers to strings
+
 #include <iostream>
 #include <cstring>
+
 int main()
 {
     using namespace std;
