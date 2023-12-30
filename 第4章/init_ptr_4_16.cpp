@@ -1,4 +1,7 @@
+// initialize a pointer
+
 #include <iostream>
+
 int main()
 {
     using namespace std;
