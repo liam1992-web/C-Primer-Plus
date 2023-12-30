@@ -1,4 +1,7 @@
+// our first pointer variable
+
 #include <iostream>
+
 int main()
 {
     using namespace std;
