@@ -1,3 +1,5 @@
+// a simple structure
+
 #include <iostream>
 struct inflatable
 {
@@ -9,7 +11,7 @@ struct inflatable
 int main()
 {
     using namespace std;
-    inflatable guest =
+    inflatable guest =    // C++ style
     {
         "Glorious Gloria",
         1.88,
