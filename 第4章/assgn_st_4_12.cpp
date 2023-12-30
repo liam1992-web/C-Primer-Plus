@@ -1,3 +1,5 @@
+// assigning structures
+
 #include <iostream>
 struct inflatable
 {
