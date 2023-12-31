@@ -1,3 +1,5 @@
+// more looping with for
+
 #include <iostream>
 const int ArSize = 16;
 int main()
