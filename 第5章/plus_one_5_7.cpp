@@ -1,3 +1,5 @@
+//  the increment operator
+
 #include <iostream>
 int main()
 {
