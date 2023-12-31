@@ -1,3 +1,5 @@
+// count as directed
+
 #include <iostream>
 int main()
 {
