@@ -1,3 +1,5 @@
+// reading chars to end of file
+
 #include <iostream>
 
 int main()
