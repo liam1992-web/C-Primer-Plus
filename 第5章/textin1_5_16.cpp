@@ -1,3 +1,5 @@
+// reading chars with a while loop
+
 #include <iostream>
 
 int main()
