@@ -1,3 +1,5 @@
+// nested loops and 2-D array
+
 #include <iostream>
 
 const int Cities = 5;
