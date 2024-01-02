@@ -1,3 +1,5 @@
+// introducing the while loop
+
 #include <iostream>
 
 const int ArSize = 20;
