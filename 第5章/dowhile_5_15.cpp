@@ -1,3 +1,5 @@
+// exit condition loop
+
 #include <iostream>
 
 int main()
