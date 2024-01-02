@@ -1,3 +1,5 @@
+// using cin.get(char)
+
 #include <iostream>
 
 int main()
