@@ -1,3 +1,5 @@
+// using continue and break
+
 #include <iostream>
 
 const int ArSize = 80;
@@ -14,10 +16,10 @@ int main()
     cout << "Line through first period:\n";
     for(int i = 0; line[i] != '\0'; i++)
     {
-        cout << line[i];
-        if(line[i] == '.')
+        cout << line[i];	// display character
+        if(line[i] == '.')	// quit if it's a period
             break;
-        if(line[i] != ' ')
+        if(line[i] != ' ')	// skip rest of loop
             continue;
         spaces++;
     }
