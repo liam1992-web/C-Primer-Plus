@@ -1,5 +1,9 @@
+// non-numeric input terminates loop
+
 #include <iostream>
+
 const int Max = 5;
+
 int main()
 {
     using namespace std;
