@@ -1,3 +1,5 @@
+// using the switch statement
+
 #include <iostream>
 
 using namespace std;
