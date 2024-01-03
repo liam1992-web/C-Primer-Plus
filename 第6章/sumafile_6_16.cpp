@@ -1,14 +1,16 @@
 //文件输出
+// fuctions with an array argument
 
 #include <iostream>
-#include <fstream>
-#include <cstdlib>
+#include <fstream>	// file I/O support
+#include <cstdlib>	// support for exit()
 
 const int SIZE = 60;
 
 int main()
 {
     using namespace std;
+    
     char filename[SIZE];
     ifstream inFile;
 
