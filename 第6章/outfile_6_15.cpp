@@ -1,3 +1,5 @@
+// writing to a file
+
 #include <iostream>
 #include <fstream>
 
@@ -24,6 +26,7 @@ int main()
     cout << fixed;
     cout.precision(2);
     cout.setf(ios_base::showpoint);
+    
     cout << "Make and model: " << automobile << endl;
     cout << "Year: " << year << endl;
     cout << "was asking $" << a_price << endl;
@@ -32,12 +35,14 @@ int main()
     outFile << fixed;                   //outFile可使用cout可使用的任何方法
     outFile.precision(2);
     outFile.setf(ios_base::showpoint);
+    
     outFile << "Make and model: " << automobile << endl;
     outFile << "Year: " << year << endl;
     outFile << "was asking $" << a_price << endl;
     outFile << "Now asking $" << d_price << endl;
 
     outFile.close();            //使用完文件后将其关闭
+    
     return 0;
 
 }
