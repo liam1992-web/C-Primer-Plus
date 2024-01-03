@@ -1,5 +1,8 @@
+// using the logical AND operator
+
 #include <iostream>
-const char* qualify[4] =
+
+const char* qualify[4] =	// an array of pointers to strings
 {
     "10,000 meter race.\n",
     "mud tug-of-war.\n",
@@ -10,6 +13,7 @@ const char* qualify[4] =
 int main()
 {
     using namespace std;
+    
     int age;
     cout << "Enter your age in years: ";
     cin >> age;
