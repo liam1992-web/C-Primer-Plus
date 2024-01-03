@@ -1,3 +1,5 @@
+// using enum
+
 #include <iostream>
 
 enum{red,orange,yellow,green,blue,violet,indigo};
@@ -8,7 +10,7 @@ int main()
     cout << "Enter color code (0-6): ";
     int code;
     cin >> code;
-    while(code >= red && code <= indigo)
+    while(code >= red && code <= indigo)	// 当switch语句将int值和枚举标签进行比较时，将枚举量提升为int，在while循环中也是如此
     {
         switch(code)
         {
