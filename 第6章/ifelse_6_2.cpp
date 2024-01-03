@@ -1,3 +1,5 @@
+// using the if else statement
+
 #include <iostream>
 
 int main()
