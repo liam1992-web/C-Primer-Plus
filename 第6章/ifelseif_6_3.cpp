@@ -1,3 +1,5 @@
+// using if else if else
+
 #include <iostream>
 
 const int Fave = 27;
