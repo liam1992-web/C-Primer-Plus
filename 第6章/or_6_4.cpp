@@ -1,4 +1,7 @@
+// using the logical OR operator
+
 #include <iostream>
+
 int main() 
 {
     using namespace std;
