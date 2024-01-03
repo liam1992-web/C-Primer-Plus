@@ -1,3 +1,5 @@
+// using the conditional operator
+
 #include <iostream>
 int main()
 {
