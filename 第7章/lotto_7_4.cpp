@@ -1,5 +1,7 @@
-#include <iostream>
+// probability of winning
 
+#include <iostream>
+// Note: some implementations require double instead of long double
 long double probability(unsigned numbers, unsigned picks);
 
 int main()
@@ -14,7 +16,7 @@ int main()
     while((cin >> total >> choices) && choices <= total)        //使用cin输入两个值
     {
         cout << "You have one chance in ";
-        cout << probability(total, choices);            //在使用cout输出字符串中 输出数值（函数返回值）
+        cout << probability(total, choices);            //在使用cout输出字符串中 输出数值（函数返回值）,compute the odds
         cout << " of winning.\n";
         cout << "Next two numbers (q to quit): ";
     }
@@ -26,7 +28,7 @@ int main()
 
 long double probability(unsigned numbers, unsigned picks)
 {
-    long double result = 1.0;
+    long double result = 1.0;	// here come some local variables
     long double n;
     unsigned p;
 
