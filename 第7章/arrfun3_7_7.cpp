@@ -1,9 +1,11 @@
+// array functions and const
+
 #include <iostream>
 
 const int Max = 5;
-
+// function prototypes
 int fill_array(double ar[], int limit);
-void show_array(const double ar[], int n);
+void show_array(const double ar[], int n);	// don't change data
 void revalue(double r, double ar[], int n);
 
 int main()
@@ -21,7 +23,7 @@ int main()
         cout << "Enter revaluation factor: ";
         double factor;
 
-        while(!(cin >> factor))
+        while(!(cin >> factor))	// bad input
         {
             cin.clear();
             while(cin.get() != '\n')
@@ -56,7 +58,7 @@ int fill_array(double ar[], int limit)
         cout << "Enter value #" << (i + 1) << ": ";
         cin >> temp;
 
-        if(!cin)
+        if(!cin)	// bad input
         {
             cin.clear();
             
@@ -67,7 +69,7 @@ int fill_array(double ar[], int limit)
 
             break;
         }
-        else if(temp < 0)
+        else if(temp < 0)	// signal to terminate
             break;
         
         ar[i] = temp;
@@ -76,6 +78,7 @@ int fill_array(double ar[], int limit)
     return i;
 }
 
+// the following function can use, but not alter, the array whose address is ar
 void show_array(const double ar[], int n)
 {
     using namespace std;
@@ -87,6 +90,7 @@ void show_array(const double ar[], int n)
     }
 }
 
+// multiplies each element of ar[] by r
 void revalue(double r, double ar[], int n)
 {
     for(int i = 0; i < n; i++)
