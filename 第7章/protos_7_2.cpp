@@ -1,11 +1,14 @@
+// using prototypes and function calls
+
 #include <iostream>
 
-void cheers(int);
-double cube(double x);
+void cheers(int);	// prototype: no return value
+double cube(double x);	// prototype: returns a double
 
 int main()
 {
     using namespace std;
+
     cheers(5);
     cout << "Give me a number: ";
     double side;
