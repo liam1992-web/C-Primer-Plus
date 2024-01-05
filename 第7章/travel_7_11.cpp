@@ -1,3 +1,5 @@
+// using structures with functions
+
 #include <iostream>
 
 struct travel_time
