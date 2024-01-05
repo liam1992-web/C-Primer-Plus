@@ -1,3 +1,5 @@
+// an array of function pointers
+
 #include <iostream>
 
 const double* f1(const double ar[], int n);
@@ -39,6 +41,7 @@ int main()
     const double *(*(*pd)[3])(const double*, int) = &pa;            //pd是指针，指向数组，数组有3个元素，数组元素的类型为函数指针
     const double* pdb = (*pd)[1](av, 3);                               //用函数返回值赋值给pdb，pdb是指针，指向double类型
     cout << pdb << ": " << *pdb << endl;
+    // alternative notation
     cout << (*(*pd)[2])(av, 3) << ": " << *(*(*pd)[2])(av, 3) << endl;
     return 0;
 }
