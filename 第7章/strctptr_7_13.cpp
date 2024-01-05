@@ -1,3 +1,5 @@
+// functions with pointer to structure arguments
+
 #include <iostream>
 #include <cmath>
 
@@ -35,6 +37,7 @@ int main()
     return 0;
 }
 
+// convert rectangular to polar coordinates
 void rect_to_polar(const rect* pxy, polar* pda)
 {
     using namespace std;
@@ -43,6 +46,7 @@ void rect_to_polar(const rect* pxy, polar* pda)
     pda->angle = atan2(pxy->y, pxy->x);
 }
 
+// show polar coordinates, converting angle to degrees
 void show_polar(const polar* pda)
 {
     using namespace std;
