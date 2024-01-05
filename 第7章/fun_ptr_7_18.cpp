@@ -1,8 +1,11 @@
+// pointers to functions
+
 #include <iostream>
 
 double betsy(int);
 double pam(int);
 
+// second argument is pointer to a type double function that takes a type int argument
 void estimate(int lines, double (*pf)(int));
 
 int main()
