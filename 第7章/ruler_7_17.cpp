@@ -1,3 +1,5 @@
+// using recursion to subdivide a ruler
+
 #include <iostream>
 
 const int Len = 66;
@@ -26,7 +28,7 @@ int main()
         std::cout << ruler << std::endl;
 
         for(int j = 1; j < Len -2; j++)
-            ruler[j] = ' ';     //循环完一次就重新初始化
+            ruler[j] = ' ';     //循环完一次就重新初始化, reset to blank ruler
     }
 
     return 0;
