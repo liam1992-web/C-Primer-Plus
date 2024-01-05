@@ -1,3 +1,4 @@
+// handling an array of string objects
 #include <iostream>
 #include <string>
 
@@ -9,7 +10,7 @@ void display(const string sa[], int n);
 
 int main()
 {
-    string list[SIZE];
+    string list[SIZE];	// an array holding 5 string object
 
     cout << "Enter your " << SIZE << " favorite astronomical sights:\n";
 
