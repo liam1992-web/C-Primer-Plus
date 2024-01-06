@@ -1,3 +1,5 @@
+// defining and using a reference
+
 #include <iostream>
 
 int main()
@@ -5,7 +7,7 @@ int main()
     using namespace std;
 
     int rats = 101;
-    int & rodents = rats;       //类型说明符
+    int & rodents = rats;       //类型说明符 rodents is a reference
 
     cout << "rats = " << rats;
     cout << ", rodents = " << rodents << endl;
@@ -14,8 +16,9 @@ int main()
     cout << "rats = " << rats;
     cout << ", rodents = " << rodents << endl;
 
+    // some implementations require type casting the following addresses to type unsigned
     cout << "rats address = " << &rats;
-    cout << ", rodents address = " << &rodents << endl;     //地址
+    cout << ", rodents address = " << &rodents << endl;     //地址,表示rodents引用的变量的地址
 
     return 0;
 }
