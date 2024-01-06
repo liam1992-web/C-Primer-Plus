@@ -1,3 +1,5 @@
+// defining and using a reference
+
 #include <iostream>
 
 int main()
@@ -5,7 +7,7 @@ int main()
     using namespace std;
 
     int rats = 101;
-    int & rodents = rats;
+    int & rodents = rats;    // rodents is a reference
 
     cout << "rats = " << rats;
     cout << ", rodents = " << rodents << endl;
