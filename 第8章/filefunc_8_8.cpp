@@ -1,3 +1,5 @@
+// function with ostream & parameter
+
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -26,7 +28,7 @@ int main()
     cin >> objective;
 
     double eps[LIMIT];
-    cout << "Enter the focal lengthd, in mm, of " << LIMIT
+    cout << "Enter the focal lengths, in mm, of " << LIMIT
          << " eyepieces:\n";
     for(int i = 0; i < LIMIT; i++)
     {
@@ -34,7 +36,7 @@ int main()
         cin >> eps[i];
     }
 
-    //函数参数类型为 ostream & ，可以指向 ostream对象（如cout），也可以指向 ofstream对象（如fout）
+    //函数参数类型为 ostream & ，可以接受 ostream对象（如cout），也可以接受 ofstream对象（如fout）
     file_it(fout, objective, eps, LIMIT);       //写入到文件中
     file_it(cout, objective, eps, LIMIT);       //写到终端
     cout << "Done\n";
@@ -46,7 +48,7 @@ void file_it(ostream & os, double fo, const double fe[], int n)
 {
     ios_base::fmtflags initial;
      //使用ostream类中的格式化方法
-    initial = os.setf(ios_base::fixed);    //方法调用 setf(ios_base::fixed) 将对象置于使用定点表示法的模式
+    initial = os.setf(ios_base::fixed);    //方法调用 setf(ios_base::fixed) 将对象置于使用定点表示法的模式 save initial formatting state
     os.precision(0);                       //方法precision指定显示多少位小数（假定对象处于定点模式下）
     os << "Focal length of objective: " << fo << " mm\n";
     os.setf(ios::showpoint);            //setf(ios::showpoint)将对象置于显示小数点的模式，即使小数部分为零
@@ -63,7 +65,7 @@ void file_it(ostream & os, double fo, const double fe[], int n)
         os.width(15);
         os << int (fo/fe[i] + 0.5) << endl;
     }
-    os.setf(initial);
+    os.setf(initial);			// restore initial formatting state
 }
 
 /*
