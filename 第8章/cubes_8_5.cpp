@@ -1,3 +1,5 @@
+// regular and reference arguments
+
 #include <iostream>
 
 double cube(double a);

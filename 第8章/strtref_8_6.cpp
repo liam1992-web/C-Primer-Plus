@@ -1,3 +1,5 @@
+// using structure references
+
 #include <iostream>
 #include <string>
 
@@ -15,6 +17,7 @@ free_throws & accumulate(free_throws & target, const free_throws & source);
 
 int main()
 {
+    // partial initializations - remaining members set to 0
     free_throws one = {"Ifelsa Branch", 13, 14};        //初始化剩余的percent设为0
     free_throws two = {"Andor Knott", 10, 16};
     free_throws three = {"Minnie Max", 7, 9};
@@ -22,6 +25,7 @@ int main()
     free_throws five = {"Long Long", 6, 14};
     free_throws team = {"Throwgoods", 0, 0};
 
+    // no initialization
     free_throws dup;
 
     set_pc(one);
@@ -29,10 +33,12 @@ int main()
     accumulate(team, one);
     display(team);
 
+    // use return value as argument
     display(accumulate(team, two));     //accumulate函数返回结构引用，作为display函数的参数
     accumulate(accumulate(team, three), four);
     display(team);
 
+    // use return value in assignment
     dup = accumulate(team, five);       //函数返回的是引用对象，左值是结构体变量，所以将右边的值赋值到左边
     std::cout << "Displaying team:\n";
     display(team);
@@ -40,6 +46,7 @@ int main()
     display(dup);
     set_pc(four);
 
+    // ill-advised assignment
     accumulate(dup, five) = four;
     std::cout << "Displaying dup after ill-advised assignment:\n";
     display(dup);
