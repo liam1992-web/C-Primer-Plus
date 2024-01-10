@@ -1,10 +1,12 @@
+// template overloading
+
 #include <iostream>
 
 template <typename T>
-void ShowArray(T arr[], int n);
+void ShowArray(T arr[], int n);		// template A
 
 template <typename T>
-void ShowArray(T * arr[], int n);
+void ShowArray(T * arr[], int n);	// template B
 
 struct debts
 {
@@ -27,14 +29,14 @@ int main()
 
     double * pd[3];
     for(int i = 0; i < 3; i++)
-        pd[i] = &mr_E[i].amount;
+        pd[i] = &mr_E[i].amount;	// set pointers to the amount members of the structures in mr_E
     
     cout << "Listing Mr. E's counts of things:\n";
-    ShowArray(things, 6);
-
+    ShowArray(things, 6);		// things is an array of int
+					// uses template A
     cout << "Listing Mr. E's debts:\n";
-    ShowArray(pd, 3);
-
+    ShowArray(pd, 3);			// pd is an array of pointers to double
+					// uses template B (more sepcialized)
     return 0;
 }
 
