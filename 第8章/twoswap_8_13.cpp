@@ -1,3 +1,5 @@
+// specialization overrides a template
+
 #include <iostream>
 
 template <typename T>       //模板函数
@@ -20,6 +22,7 @@ int main()
 
     cout.precision(2);
     cout.setf(ios::fixed, ios::floatfield);
+
     int i = 10, j = 20;
     cout << "i, j = " << i << ", " << j << ".\n";
     cout << "Using compiler-generated int swapper:\n";
@@ -42,7 +45,7 @@ int main()
 }
 
 template <typename T>
-void Swap(T & a, T & b)
+void Swap(T & a, T & b)		// general version
 {
     T temp;
     temp = a;
@@ -50,7 +53,8 @@ void Swap(T & a, T & b)
     b = temp;
 }
 
-template <> void Swap<job>(job & j1, job & j2)
+// swaps just the salary and floor fields of a job structure
+template <> void Swap<job>(job & j1, job & j2)	// specialization
 {
     double t1;
     int t2;
