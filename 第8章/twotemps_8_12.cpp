@@ -1,10 +1,12 @@
+// using overloaded template functions
+
 #include <iostream>
 
 template <typename T>
-void Swap(T & a, T & b);
+void Swap(T & a, T & b);	// original template
 
 template <typename T>
-void Swap(T * a, T * b, int n);
+void Swap(T * a, T * b, int n);	// new template
 
 void Show(int a[]);
 const int Lim = 8;
@@ -12,10 +14,11 @@ const int Lim = 8;
 int main()
 {
     using namespace std;
+
     int i = 10, j = 20;
     cout << "i, j = " << i << ", " << j << ".\n";
     cout << "Using compiler-generated int swapper:\n";
-    Swap(i, j);
+    Swap(i, j);			// matches original template
     cout << "Now i, j = " << i << ", " << j << ".\n";
 
     int d1[Lim] = {0, 7, 0, 4, 1, 7, 7, 6};
@@ -23,7 +26,7 @@ int main()
     cout << "Original arrays:\n";
     Show(d1);
     Show(d2);
-    Swap(d1, d2, Lim);
+    Swap(d1, d2, Lim);		// matches new template
     cout << "Swapped arrays:\n";
     Show(d1);
     Show(d2);
