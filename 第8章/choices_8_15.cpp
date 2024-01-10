@@ -1,3 +1,5 @@
+// choising a template
+
 #include <iostream>
 
 template <class T>
@@ -24,8 +26,8 @@ int main()
 
     cout << lesser(m, n) << endl;       //use #2
     cout << lesser(x, y) << endl;       //use #1
-    cout << lesser<>(m, n) << endl;     //use #1  !!    显式实例化
-    cout << lesser<int>(x, y) << endl;  //use #1  !!    显式实例化
+    cout << lesser<>(m, n) << endl;     //use #1 with int !! 句子中的<>指出，编译器应该选择模板函数，而不是非模板函数；
+    cout << lesser<int>(x, y) << endl;  //use #1 with int !!    显式实例化，在程序中使用函数来创建显式实例化
 
     return 0;
 
