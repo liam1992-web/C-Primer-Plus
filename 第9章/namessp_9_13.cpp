@@ -1,3 +1,5 @@
+// using namespaces
+
 #include <iostream>
 #include "namesp_9_11.h"
 
