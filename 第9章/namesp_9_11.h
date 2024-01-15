@@ -1,3 +1,5 @@
+// create the pers and debts namespaces
+
 #include <string>
 
 namespace pers
