@@ -1,3 +1,5 @@
+// structure templates and function prototypes
+
 #ifndef COORDIN_H_
 #define COORDIN_H_
 
