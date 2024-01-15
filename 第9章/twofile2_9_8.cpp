@@ -1,3 +1,5 @@
+// variables with internal and external linkage
+
 #include <iostream>
 
 extern int tom;
