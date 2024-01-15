@@ -1,3 +1,5 @@
+// illustrating scope of automatic variables
+
 #include <iostream>
 
 void oil(int x);
