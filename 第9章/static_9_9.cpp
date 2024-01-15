@@ -1,3 +1,5 @@
+// using a static local variable
+
 #include <iostream>
 
 const int ArSize = 10;
