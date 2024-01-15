@@ -1,9 +1,11 @@
+// using placement new
+
 #include <iostream>
-#include <new>
+#include <new>     // for placement new
 
 const int BUF = 512;
 const int N = 5;
-char buffer[BUF];
+char buffer[BUF];  // chunk of memory  
 
 int main()
 {
