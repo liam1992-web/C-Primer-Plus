@@ -1,5 +1,7 @@
+// example of a three-file program
+
 #include <iostream>
-#include "coordin_9_1.h"
+#include "coordin_9_1.h" // structure templates, function prototype
 
 using namespace std;
 
@@ -9,7 +11,7 @@ int main()
     polar pplace;
 
     cout << "Enter the x and y values: ";
-    while(cin >> rplace.x >> rplace.y)
+    while(cin >> rplace.x >> rplace.y)    // slick use of cin
     {
         pplace = rect_to_polar(rplace);
         show_polar(pplace);
