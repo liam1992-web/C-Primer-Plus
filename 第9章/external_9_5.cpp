@@ -1,3 +1,5 @@
+// external variables
+
 #include <iostream>
 
 using namespace std;
