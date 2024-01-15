@@ -1,3 +1,5 @@
+// use external variable
+
 #include <iostream>
 
 extern double warming;
@@ -21,4 +23,4 @@ void local()
     cout << "Local warming = " << warming << " degrees.\n";
     cout << "But global warming = " << ::warming;       //::作用域解析运算符，放在变量名前面时，该运算符表示使用变量的全局版本
     cout << " degrees.\n";
-}
+}reso
