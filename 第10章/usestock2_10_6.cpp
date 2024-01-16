@@ -1,3 +1,5 @@
+// using the Stock calss
+
 #include <iostream>
 #include "stock10_10_4.h"
 
