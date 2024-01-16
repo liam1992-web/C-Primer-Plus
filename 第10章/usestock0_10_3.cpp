@@ -1,3 +1,4 @@
+// the client program
 #include <iostream>
 #include "stock00_10_1.h"
 
