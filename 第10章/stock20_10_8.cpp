@@ -1,3 +1,5 @@
+// augmented version
+
 #include <iostream>
 #include "stock20_10_7.h"
 
