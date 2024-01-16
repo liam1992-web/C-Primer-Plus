@@ -1,3 +1,5 @@
+// implementing the Stock class
+
 #include <iostream>
 #include "stock00_10_1.h"
 
