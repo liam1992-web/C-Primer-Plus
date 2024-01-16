@@ -1,3 +1,5 @@
+// Stock class declaration with constructors, destructor added
+
 #ifndef STOCK10_H_
 #define STOCK10_H_
 
