@@ -1,3 +1,5 @@
+// Stock class with constructors, destructor added
+
 #include <iostream>
 #include "stock10_10_4.h"
 
