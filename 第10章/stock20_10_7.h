@@ -1,3 +1,5 @@
+// augmented version
+
 #ifndef STOCK20_H_
 #define STOCK20_H_
 
