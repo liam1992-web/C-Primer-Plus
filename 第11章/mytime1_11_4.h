@@ -1,3 +1,5 @@
+// Time class before operator overloading
+
 #ifndef MYTIME1_H_
 #define MYTIME1_H_
 
