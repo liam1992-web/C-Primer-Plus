@@ -1,6 +1,8 @@
+// Stack member functions
+
 #include "stack_10_10.h"
 
-Stack::Stack()
+Stack::Stack()		// create an empty stack
 {
     top = 0;
 }
