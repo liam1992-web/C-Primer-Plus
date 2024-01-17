@@ -1,3 +1,5 @@
+// using the third draft of the Time class
+
 #include <iostream>
 #include "mytime2_11_7.h"
 
@@ -21,16 +23,16 @@ int main()
     cout << endl;
 
     cout << "total work time = ";
-    total = weeding + waxing;
+    total = weeding + waxing;	// use operator+()
     total.Show();
     cout << endl;
     
-    diff = weeding - waxing;
+    diff = weeding - waxing;	// use operator-()
     cout << "weeding time - waxing time = ";
     diff.Show();
     cout << endl;
 
-    adjusted = total * 1.5;
+    adjusted = total * 1.5;	// use operator*()
     cout << "adjusted work time = ";
     adjusted.Show();
     cout << endl;
