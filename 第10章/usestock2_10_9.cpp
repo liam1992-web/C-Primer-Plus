@@ -1,3 +1,5 @@
+// using the Stock class
+
 #include <iostream>
 #include "stock20_10_7.h"
 
