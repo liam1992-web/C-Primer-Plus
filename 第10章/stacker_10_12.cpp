@@ -1,3 +1,5 @@
+// testing the Stack class
+
 #include <iostream>
 #include <cctype>
 #include "stack_10_10.h"
