@@ -1,3 +1,5 @@
+// using the fourth draft of the Time class
+
 #include <iostream>
 #include "mytime3_11_10.h"
 
