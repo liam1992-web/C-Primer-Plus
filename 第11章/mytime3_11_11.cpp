@@ -1,3 +1,5 @@
+// implementing Time methods
+
 #include <iostream>
 #include "mytime3_11_10.h"
 
