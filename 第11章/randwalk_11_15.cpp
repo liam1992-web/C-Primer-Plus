@@ -1,6 +1,8 @@
+// using the Vector class
+
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include <cstdlib>	// rand(), srand() prototypes
+#include <ctime>	// time() prototype
 #include "vector_11_13.h"
 
 int main()
@@ -8,7 +10,7 @@ int main()
     using namespace std;
     using  VECTOR::Vector;      //使用using声明导入了Vector，导入类名称
                                 //因此可使用Vector::POL,而不必使用VECTOR::Vector::POL
-    srand(time(0));
+    srand(time(0));		// seed random-number generator
 
     double direction;
     Vector step;                    //矢量 新的方向，用于与result相加
