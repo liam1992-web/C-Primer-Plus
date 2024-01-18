@@ -1,3 +1,5 @@
+// Stonewt class methods + conversion functions
+
 #include <iostream>
 using std::cout;
 #include "stonewt1_11_19.h"
@@ -38,9 +40,10 @@ void Stonewt::show_lbs() const
     cout << pounds << " pounds\n";
 }
 
+// conversion functions
 Stonewt::operator int() const
 {
-    return int (pounds + 0.5);
+    return int (pounds + 0.5);		// 四舍五入
 }
 
 Stonewt::operator double() const
