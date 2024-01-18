@@ -1,3 +1,5 @@
+// Time class with friends
+
 #ifndef MYTIME3_H_
 #define MYTIME3_H_
 
