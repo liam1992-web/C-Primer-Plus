@@ -1,3 +1,5 @@
+// methods for the Vector class
+
 #include <cmath>
 #include "vector_11_13.h"
 
@@ -10,8 +12,11 @@ using std::cout;
 
 namespace VECTOR
 {
+    // compute degrees in one radian
     const double Rad_to_deg = 45.0 / atan(1.0);
 
+    // private methods
+    // calculates magnitude from x and y
     void Vector::set_mag()
     {
         mag = sqrt(x * x + y * y);
@@ -25,22 +30,28 @@ namespace VECTOR
             ang = atan2(y,x);
     }
 
+    // set x from polar coordinate
     void Vector::set_x()
     {
         x = mag * cos(ang);
     }
 
+
+    // set y from polar coordinate
     void Vector::set_y()
     {
         y = mag * sin(ang);
     }
 
-    Vector::Vector()
+    // public methods
+    Vector::Vector()	// default constructor
     {
         x = y = mag = ang = 0.0;
         mode = RECT;
     }
 
+    // construct vector from rectangular coordinates if form is r
+    // (the default) or else from polar coordinates if form is p 
     Vector::Vector(double n1, double n2, Mode form)
     {
         mode = form;
@@ -67,6 +78,8 @@ namespace VECTOR
         }
     }
 
+    // reset vector from rectangular coordinates if form is RECT
+    // (the default) or else from polar coordinates  if form is POL
     void Vector::reset(double n1, double n2, Mode form)
     {
         mode = form;
@@ -93,46 +106,58 @@ namespace VECTOR
         }
     }
 
+    // destructor
     Vector::~Vector()
     {
 
     }
 
+    // set to polar mode
     void Vector::polar_mode()
     {
         mode = POL;
     }
-
+    
+    // set to rectangular mode
     void Vector::rect_mode()
     {
         mode = RECT;
     }
 
+    // operator overloading
+    // add two Vectors
     Vector Vector::operator+(const Vector & b) const
     {
         return Vector(x + b.x, y + b.y);
     }
 
+    // subtract Vector b from a
     Vector Vector::operator-(const Vector & b) const
     {
         return Vector(x - b.x, y - b.y);
     }
 
+    // reverse sign of Vector
     Vector Vector::operator-() const
     {
         return Vector(-x, -y);
     }
 
+    // multiply vector by n
     Vector Vector::operator*(double n) const
     {
         return Vector(n * x, n * y);
     }
 
+    // friend methods
+    // multipy n by Vector a
     Vector operator*(double n, const Vector & a)
     {
         return a * n;
     }
 
+    // display rectangular coordinates if mode is RECT,
+    // else display polar coordinates if mode is POL
     std::ostream & operator<<(std::ostream & os, const Vector & v)
     {
         if(v.mode == Vector::RECT)
@@ -147,4 +172,4 @@ namespace VECTOR
         return os;
     }
 
-}
+}	// end namespace VECTOR
