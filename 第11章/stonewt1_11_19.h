@@ -1,3 +1,5 @@
+// revised definition for the Stonewt class
+
 #ifndef STONEWT1_H_
 #define STONEWT1_H_
 
