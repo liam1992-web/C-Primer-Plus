@@ -1,8 +1,10 @@
+// StringBad class methods
 #include <cstring>
 #include "strngbad_12_1.h"
 
 using std::cout;
 
+// initializing static class member
 int StringBad::num_strings = 0;
 /*将静态成员初始化为0，不能再类声明中初始化静态成员变量，因为声明描述了如何分配内存，但并不分配内存
 通过这种格式来创建对象，从而分配和初始化内存
@@ -13,6 +15,8 @@ int StringBad::num_strings = 0;
 初始化时使用作用域运算符来指出静态成员所属的类
 如果静态成员是整型或枚举型const，则可在类声明中初始化*/
 
+// class methods
+// construct StringBad from C string
 StringBad::StringBad(const char *s)
 {
     len = std::strlen(s);       //strlen()返回字符串长度，但不包含末尾的空字符，因此需要将申请的内存加1
@@ -23,15 +27,17 @@ StringBad::StringBad(const char *s)
     cout << num_strings << ": \"" << str << "\" object created\n";
 }
 
+// default constructor
 StringBad::StringBad()
 {
     len = 4;
     str = new char[4];
-    std::strcpy(str, "C++");
+    std::strcpy(str, "C++");	// default string
     num_strings++;
     cout << num_strings << ": \"" << str << "\" default object created\n"; 
 }
 
+// necessary destructor
 StringBad::~StringBad()
 {
     cout << "\"" << str << "\" object deleted, ";
