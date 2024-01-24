@@ -1,3 +1,4 @@
+// fixed and augmented string class definition
 #ifndef STRNGBAD1_H_
 #define STRNGBAD1_H_
 #include <iostream>
