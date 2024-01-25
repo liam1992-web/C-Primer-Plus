@@ -9,10 +9,10 @@ using std::istream;
 class String
 {
     private:
-        char * str;
-        int len;
-        static int num_strings;
-        static const int CINLIM = 80;
+        char * str;		// pointer to string
+        int len;		// length of string
+        static int num_strings;	// number of objects
+        static const int CINLIM = 80;	// cin input limit
     public:
         String(const char * s);     //构造函数
         String();                   //默认构造函数
