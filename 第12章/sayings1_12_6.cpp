@@ -1,3 +1,4 @@
+// using expanded String class
 #include <iostream>
 #include "string1_12_4.h"
 
