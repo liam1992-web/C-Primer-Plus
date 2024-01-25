@@ -1,11 +1,13 @@
+// String class methods
 #include <cstring>
-#include "string1_12_4.h"
+#include "string1_12_4.h"	// includes <iostream>
 
 using std::cout;
 using std::cin;
 
+// initializing static class member
 int String::num_strings = 0;
-/*将静态成员初始化为0，不能再类声明中初始化静态成员变量，因为声明描述了如何分配内存，但并不分配内存
+/*将静态成员初始化为0，不能在类声明中初始化静态成员变量，因为声明描述了如何分配内存，但并不分配内存
 通过这种格式来创建对象，从而分配和初始化内存
 对于静态类成员，可在类声明之外使用单独的语句来进行初始化，这是因为静态类成员是单独存储的，而不是对象的组成部分
 初始化语句指出了类型，并使用了作用域运算符，但没有使用关键字static*/
@@ -13,13 +15,14 @@ int String::num_strings = 0;
 /*静态数据成员在类声明中声明，在包含类方法的文件中初始化
 初始化时使用作用域运算符来指出静态成员所属的类
 如果静态成员是整型或枚举型const，则可在类声明中初始化*/
-
+// static method
 int String::HowMany()
 {
     return num_strings;
 }
 
-String::String(const char *s)
+// class methods
+String::String(const char *s)	// construct String from C string
 {
     len = std::strlen(s);       //strlen()返回字符串长度，但不包含末尾的空字符，因此需要将申请的内存加1
     str = new char[len + 1];        //分配存储空间
@@ -44,10 +47,10 @@ String::String()
 
 String::String(const String & st)
 {
-    num_strings;
+    num_strings++;	// handle static member update
     len = st.len;
     str = new char [len + 1];
-    std::strcpy(str, st.str);
+    std::strcpy(str, st.str);		// copy string to neww location
 }
 
 String::~String()
@@ -92,6 +95,7 @@ const char & String::operator[](int i) const
     return str[i];
 }
 
+// overload operator friends
 bool operator<(const String & st1, const String & st2)
 {
     return (std::strcmp(st1.str, st2.str) < 0);
@@ -107,12 +111,14 @@ bool operator==(const String & st1, const String & st2)
     return (std::strcmp(st1.str, st2.str) == 0);
 }
 
+// simple String output
 ostream & operator<<(ostream & os, const String & st)
 {
     os << st.str;
     return os;
 }
 
+//
 istream & operator>>(istream & is, String & st)
 {
     char temp[String::CINLIM];
