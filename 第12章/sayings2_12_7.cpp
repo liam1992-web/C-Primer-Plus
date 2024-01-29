@@ -1,3 +1,5 @@
+// using pointers to objects
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -39,13 +41,14 @@ int main()
         for(i = 0; i < total; i++)
             cout << sayings[i] << endl;
         
-        String * shortest = &sayings[0];
+	// use pointers to keep track of shortest, first strings
+        String * shortest = &sayings[0];	// initialize to first object
         String * first = &sayings[0];
         for(i = 1; i < total; i++)
         {
-            if(sayings[i].length() < shortest->length())
+            if(sayings[i].length() < shortest->length())	// 指针调用类方法->
                 shortest = &sayings[i];
-            if(sayings[i] < *first) 
+            if(sayings[i] < *first) 	// 使用*解引用 从指针获得对象
                 first = &sayings[i];
         } 
         
@@ -53,7 +56,9 @@ int main()
         cout << "First alphabetically:\n" << *first << endl;
         srand(time(0));
         int choice = rand() % total;
-        String * favourite = new String(sayings[choice]);
+	// use new to create, intialize new String object
+        String * favourite = new String(sayings[choice]);	
+	// 调用复制构造函数，用sayings[choice]来初始化未命名的新对象
         cout << "My favourite saying:\n" << *favourite << endl;
         delete favourite;       //当对象是用new创建的，仅当显式使用delete删除对象时，其析构函数才会被调用
     }
