@@ -1,3 +1,5 @@
+// new, placement new, no delete
+
 #include <iostream>
 #include <string>
 #include <new>
