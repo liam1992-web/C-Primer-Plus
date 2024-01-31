@@ -1,3 +1,5 @@
+// new, placement new, no delete
+
 #include <iostream>
 #include <string>
 #include <new>
@@ -28,6 +30,7 @@ int main()
     pc1 = new (buffer) JustTesting;         //place object in buffer
     pc2 = new JustTesting("Heap1", 20);     //place object on hep
     cout << "Memory block addresses:\n" << "buffer: " << (void*)buffer << "    heap: " << pc2 << endl;
+
     cout << "Memory contents:\n";
     cout << pc1 << ": ";
     pc1->Show();
@@ -37,6 +40,7 @@ int main()
     JustTesting *pc3, *pc4;
     pc3 = new(buffer + sizeof(JustTesting))JustTesting("Bad Idea", 6);        
     pc4 = new JustTesting("Heap2", 10);
+    
     cout << "Memory contents:\n";
     cout << pc3 << ": ";
     pc3->Show();
