@@ -28,8 +28,10 @@ int main()
 
     JustTesting *pc1, *pc2;
     pc1 = new (buffer) JustTesting;         //place object in buffer
-    pc2 = new JustTesting("Heap1", 20);     //place object on hep
+    pc2 = new JustTesting("Heap1", 20);     //place object on heap
+					    
     cout << "Memory block addresses:\n" << "buffer: " << (void*)buffer << "    heap: " << pc2 << endl;
+
     cout << "Memory contents:\n";
     cout << pc1 << ": ";
     pc1->Show();
@@ -37,8 +39,9 @@ int main()
     pc2->Show();
 
     JustTesting *pc3, *pc4;
-    pc3 = new(buffer)JustTesting("Bad Idea", 6);        //使用的内存单元与PC2重叠
+    pc3 = new(buffer)JustTesting("Bad Idea", 6);        //使用的内存单元与PC1重叠
     pc4 = new JustTesting("Heap2", 10);
+
     cout << "Memory contents:\n";
     cout << pc3 << ": ";
     pc3->Show();
